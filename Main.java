@@ -36,6 +36,8 @@ public class Main extends Application {
     Button btn = new Button();
     btn.setText("Say 'Hello World'");
     
+    Button btn2 = new Button();
+    btn2.setText("Say 'Hello World'");   
  /*   btn.setOnAction(new EventHandler<ActionEvent>() {
 
       @Override
