@@ -28,6 +28,7 @@ import javafx.scene.Scene;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 
 public class MyApp extends Application {
     public void start(Stage stage) {
@@ -40,6 +41,11 @@ public class MyApp extends Application {
         int red = 30;
         int green = 40;
         int blue = 50;
+                Text text = new Text(x, y, "JavaFX 2.0");
+
+        text.setFill(Color.rgb(red, green, blue, .99));
+        text.setRotate(60);
+                root.getChildren().add(text);
         stage.setTitle("My JavaFX Application");
         stage.setScene(scene);
         stage.show();
