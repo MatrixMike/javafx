@@ -27,14 +27,19 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import javafx.scene.paint.Color;
 
 public class MyApp extends Application {
     public void start(Stage stage) {
         Circle circ = new Circle(40, 40, 30);
         Group root = new Group(circ);
  //       Scene scene = new Scene(root, 400, 300);
-              Scene scene = new Scene(root, 300, 250, Color.RED);
-
+              Scene scene = new Scene(root, 300, 250, Color.RED);  // creates RED background
+        int x = 100;
+        int y = 100;
+        int red = 30;
+        int green = 40;
+        int blue = 50;
         stage.setTitle("My JavaFX Application");
         stage.setScene(scene);
         stage.show();
