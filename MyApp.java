@@ -32,7 +32,8 @@ public class MyApp extends Application {
     public void start(Stage stage) {
         Circle circ = new Circle(40, 40, 30);
         Group root = new Group(circ);
-        Scene scene = new Scene(root, 400, 300);
+ //       Scene scene = new Scene(root, 400, 300);
+              Scene scene = new Scene(root, 300, 250, Color.RED);
 
         stage.setTitle("My JavaFX Application");
         stage.setScene(scene);
