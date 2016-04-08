@@ -1,5 +1,5 @@
 /*
- * Main.java
+ * Main5.java
  * 
  * Copyright 2016 mike <mikeh@mikeh-OptiPlex-745>
  * 
@@ -21,42 +21,38 @@
  * 
  */
 
+
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-//from   w w  w  .  j  a  v  a 2 s  .  co m
-public class Main extends Application {
-
+//from  w ww.j av  a 2 s. co  m
+public class Main5 extends Application {
   @Override
-  public void start(Stage primaryStage) {
-    Button btn = new Button();
-    btn.setText("Say 'Hello World'");
+  public void start(Stage stage) {
+    HBox root = new HBox();
+    Scene scene = new Scene(root, 300, 150);
+    stage.setScene(scene);
+    stage.setTitle("not working properly-Mike");
+
+    ToggleGroup group = new ToggleGroup();
+    RadioButton button1 = new RadioButton("select first");
+    button1.setToggleGroup(group);
+    button1.setSelected(true);
+    RadioButton button2 = new RadioButton("select second");
+    button2.setToggleGroup(group);
     
- //   Button btn2 = new Button();
- //   btn2.setText("Say 'Hello World'");   
- /*   btn.setOnAction(new EventHandler<ActionEvent>() {
+    root.getChildren().add(button1);
+    root.getChildren().add(button2);
 
-      @Override
-      public void handle(ActionEvent event) {
-        System.out.println("Hello World!");
-      }
-    });
- */
-    StackPane root = new StackPane();
-    root.getChildren().add(btn);
-
-    Scene scene = new Scene(root, 300, 250);
-
-    primaryStage.setTitle("Hello World!");
-    primaryStage.setScene(scene);
-    primaryStage.show();
+    scene.setRoot(root);
+    stage.show();
   }
 
   public static void main(String[] args) {
     launch(args);
   }
 }
+

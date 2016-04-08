@@ -1,5 +1,5 @@
 /*
- * Main.java
+ * Main4.java
  * 
  * Copyright 2016 mike <mikeh@mikeh-OptiPlex-745>
  * 
@@ -21,42 +21,39 @@
  * 
  */
 
-import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
-//from   w w  w  .  j  a  v  a 2 s  .  co m
-public class Main extends Application {
 
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
+import javafx.scene.shape.StrokeLineCap;
+import javafx.stage.Stage;
+//from   ww  w .  j  a  va  2 s  . c  o m
+public class Main4 extends Application {
   @Override
   public void start(Stage primaryStage) {
-    Button btn = new Button();
-    btn.setText("Say 'Hello World'");
-    
- //   Button btn2 = new Button();
- //   btn2.setText("Say 'Hello World'");   
- /*   btn.setOnAction(new EventHandler<ActionEvent>() {
+    primaryStage.setTitle("Drawing Lines");
 
-      @Override
-      public void handle(ActionEvent event) {
-        System.out.println("Hello World!");
-      }
-    });
- */
-    StackPane root = new StackPane();
-    root.getChildren().add(btn);
+    Group root = new Group();
+    Scene scene = new Scene(root, 300, 150, Color.GRAY);
 
-    Scene scene = new Scene(root, 300, 250);
+    Line redLine = new Line(10, 10, 200, 10);
 
-    primaryStage.setTitle("Hello World!");
+    redLine.setStroke(Color.RED);
+    redLine.setStrokeWidth(10);
+    redLine.setStrokeLineCap(StrokeLineCap.BUTT);
+
+    redLine.getStrokeDashArray().addAll(15d, 5d, 15d, 15d, 20d);
+    redLine.setStrokeDashOffset(10);
+
+    root.getChildren().add(redLine);
+
     primaryStage.setScene(scene);
     primaryStage.show();
   }
-
   public static void main(String[] args) {
     launch(args);
   }
 }
+
