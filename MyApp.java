@@ -37,7 +37,8 @@ public class MyApp extends Application {
 		cx2=200;cy2=200;
 		
         Circle circ1 = new Circle(cx1, cy1, 30);
-        Circle circ2 = new Circle(140, 140, 30);  // xy location and radius
+        Circle circ2 = new Circle(cx2, cy2, 30);  // xy location and radius
+        Circle circ3 = new Circle((cx1+cx2)/2, (cy1+cy2)/2, 30);  // xy location and radius
         Group root = new Group(circ1);
  //       Scene scene = new Scene(root, 400, 300);
         Scene scene = new Scene(root, 300, 250, Color.RED);  // creates RED background
@@ -53,7 +54,8 @@ public class MyApp extends Application {
         text.setRotate(60);
         
         root.getChildren().add(text);
-        root.getChildren().add(circ2);               
+        root.getChildren().add(circ2);  
+        root.getChildren().add(circ3);              
         stage.setTitle("My JavaFX Application");
         stage.setScene(scene);
         stage.show();
