@@ -40,13 +40,18 @@ public class Main5 extends Application {
     ToggleGroup group = new ToggleGroup();
     RadioButton button1 = new RadioButton("select first");
     button1.setToggleGroup(group);
-    button1.setSelected(true);
+
     RadioButton button2 = new RadioButton("select second");
     button2.setToggleGroup(group);
     
+    RadioButton button3 = new RadioButton("select third");
+    button3.setToggleGroup(group);   
+    
+    button1.setSelected(true);    
     root.getChildren().add(button1);
     root.getChildren().add(button2);
-
+    root.getChildren().add(button3);
+    
     scene.setRoot(root);
     stage.show();
   }

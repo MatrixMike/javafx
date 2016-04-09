@@ -48,7 +48,7 @@ public class Main2 extends Application {
         
         final Parameters params = getParameters();
         final List<String> parameters = params.getRaw();
-        final String imageUrl = !parameters.isEmpty() ? parameters.get(0) : "";
+        final String imageUrl = !parameters.isEmpty() ? parameters.get(0) : "ZZ";
         
         primaryStage.show();
     }

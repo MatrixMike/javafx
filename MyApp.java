@@ -34,7 +34,7 @@ public class MyApp extends Application {
     public void start(Stage stage) {
 		int cx1,cy1,cx2,cy2;
 		cx1=40; cy1=40;
-		cx2=200;cy2=200;
+		cx2=200;cy2=250;
 		
         Circle circ1 = new Circle(cx1, cy1, 30);
         Circle circ2 = new Circle(cx2, cy2, 30);  // xy location and radius
@@ -55,7 +55,8 @@ public class MyApp extends Application {
         
         root.getChildren().add(text);
         root.getChildren().add(circ2);  
-        root.getChildren().add(circ3);              
+        root.getChildren().add(circ3);  
+ //     root.getChildren().add(circ1);        // if we try to add circ1 -> compile fails      
         stage.setTitle("My JavaFX Application");
         stage.setScene(scene);
         stage.show();

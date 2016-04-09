@@ -37,13 +37,13 @@ public class Main3 extends Application {
         scene.setFill(null);
         
         Line line = new Line();
-        line.setStartX(0.0f);
-        line.setStartY(0.0f);
+        line.setStartX(130.0f);
+        line.setStartY(130.0f);
         line.setEndX(100.0f);
         line.setEndY(100.0f);
         
         box.getChildren().add(line);
-        
+        stage.setTitle("Line drawing test-Mike");       
         stage.setScene(scene);
         stage.show();
     }
