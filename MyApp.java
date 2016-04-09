@@ -32,23 +32,28 @@ import javafx.scene.text.Text;
 
 public class MyApp extends Application {
     public void start(Stage stage) {
-        Circle circ = new Circle(40, 40, 30);
-                Circle circ2 = new Circle(140, 140, 30);
-        Group root = new Group(circ);
+		int cx1,cy1,cx2,cy2;
+		cx1=40; cy1=40;
+		cx2=200;cy2=200;
+		
+        Circle circ1 = new Circle(cx1, cy1, 30);
+        Circle circ2 = new Circle(140, 140, 30);  // xy location and radius
+        Group root = new Group(circ1);
  //       Scene scene = new Scene(root, 400, 300);
         Scene scene = new Scene(root, 300, 250, Color.RED);  // creates RED background
         int x = 100;
         int y = 100;
+        
         int red = 30;
-        int green = 40;
-        int blue = 50;
+        int green = 240;
+        int blue = 250;
         Text text = new Text(x, y, "JavaFX 2.0");
 
         text.setFill(Color.rgb(red, green, blue, .99));
         text.setRotate(60);
         
         root.getChildren().add(text);
-         root.getChildren().add(circ2);               
+        root.getChildren().add(circ2);               
         stage.setTitle("My JavaFX Application");
         stage.setScene(scene);
         stage.show();
