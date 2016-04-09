@@ -1,4 +1,4 @@
-package scenegraphdemo;
+// package scenegraphdemo;
  
 import javafx.application.Application;
 import javafx.scene.Group;
