@@ -38,7 +38,7 @@ public class MyApp extends Application {
 		
         Circle circ1 = new Circle(cx1, cy1, 30);
         Circle circ2 = new Circle(cx2, cy2, 30);  // xy location and radius
-        Circle circ3 = new Circle((cx1+cx2)/2, (cy1+cy2)/2, 30);  // xy location and radius
+        Circle circ3 = new Circle((cx1+cx2)/2, (cy1+cy2)/2, 20);  // xy location and radius
         Group root = new Group(circ1);
  //       Scene scene = new Scene(root, 400, 300);
         Scene scene = new Scene(root, 300, 250, Color.RED);  // creates RED background
