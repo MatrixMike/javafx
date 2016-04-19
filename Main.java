@@ -53,6 +53,9 @@ public class Main extends Application {
     btn1.setLayoutY(220);
     btn2.setLayoutX(150);
     btn2.setLayoutY(120);
+    
+    btn1.setTranslateX(30);
+    btn1.setTranslateY(30);
     root.getChildren().add(btn1);
     root.getChildren().add(btn2);
     
