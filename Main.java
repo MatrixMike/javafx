@@ -49,11 +49,11 @@ public class Main extends Application {
  
  // http://stackoverflow.com/questions/10028587/how-to-position-a-button-or-any-gui-element-in-javafx-scene
     StackPane root = new StackPane();
-    btn1.setLayoutX(250);
+/*    btn1.setLayoutX(250);
     btn1.setLayoutY(220);
     btn2.setLayoutX(150);
     btn2.setLayoutY(120);
-    
+  */  
     btn1.setTranslateX(30);
     btn1.setTranslateY(30);
     root.getChildren().add(btn1);
