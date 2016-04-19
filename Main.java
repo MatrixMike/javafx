@@ -33,11 +33,11 @@ public class Main extends Application {
 
   @Override
   public void start(Stage primaryStage) {
-    Button btn = new Button();
-    btn.setText("Say 'Hello World'");
+    Button btn1 = new Button();
+    btn1.setText("Say 'Hello World one'");
     
- //   Button btn2 = new Button();
- //   btn2.setText("Say 'Hello World'");   
+    Button btn2 = new Button();		// creating and adding btn2 seems to write on top 
+    btn2.setText("Say 'Hello World two'");   // of btn
  /*   btn.setOnAction(new EventHandler<ActionEvent>() {
 
       @Override
@@ -47,8 +47,9 @@ public class Main extends Application {
     });
  */
     StackPane root = new StackPane();
-    root.getChildren().add(btn);
-
+    root.getChildren().add(btn1);
+    root.getChildren().add(btn2);
+    
     Scene scene = new Scene(root, 300, 250);
 
     primaryStage.setTitle("Hello World!");
