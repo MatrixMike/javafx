@@ -30,8 +30,14 @@ import javafx.stage.Stage;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
+	class bisect  {
+	int x1,y1,x2,y2; 	
+}
+
 public class MyApp extends Application {
+
     public void start(Stage stage) {
+
 		int cx1,cy1,cx2,cy2;
 		cx1=40; cy1=40;
 		cx2=200;cy2=250;
@@ -39,6 +45,7 @@ public class MyApp extends Application {
         Circle circ1 = new Circle(cx1, cy1, 30);
         Circle circ2 = new Circle(cx2, cy2, 30);  // xy location and radius
         Circle circ3 = new Circle((cx1+cx2)/2, (cy1+cy2)/2, 20);  // xy location and radius
+ //       bisect (cx1,cy1,cx2,cy2);
         Group root = new Group(circ1);
  //       Scene scene = new Scene(root, 400, 300);
         Scene scene = new Scene(root, 300, 250, Color.RED);  // creates RED background
