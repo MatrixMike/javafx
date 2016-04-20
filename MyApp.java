@@ -29,6 +29,7 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+import javafx.scene.control.Button;
 
 	class bisect  {
 	int x1,y1,x2,y2; 	
@@ -37,7 +38,8 @@ import javafx.scene.text.Text;
 public class MyApp extends Application {
 
     public void start(Stage stage) {
-
+   Button btn1 = new Button();
+    btn1.setText("Say 'Hello World one'");
 		int cx1,cy1,cx2,cy2;
 		cx1=40; cy1=40;
 		cx2=200;cy2=250;
@@ -59,10 +61,12 @@ public class MyApp extends Application {
 
         text.setFill(Color.rgb(red, green, blue, .99));
         text.setRotate(60);
-        
+        btn1.setTranslateX(30);
+        btn1.setTranslateY(30);       
         root.getChildren().add(text);
         root.getChildren().add(circ2);  
         root.getChildren().add(circ3);  
+        root.getChildren().add(btn1);
  //     root.getChildren().add(circ1);        // if we try to add circ1 -> compile fails      
         stage.setTitle("My JavaFX Application");
         stage.setScene(scene);
